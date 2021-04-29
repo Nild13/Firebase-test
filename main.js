@@ -43,6 +43,6 @@ form.addEventListener('submit', (e) =>{
         name:form.name.value,
         city:form.city.value
     })
-    form.name.value = '';
+    // form.name.value = '';
     form.city.value = '';
 })

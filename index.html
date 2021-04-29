@@ -5,20 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Press+Start+2P&family=Tomorrow:wght@200&family=VT323&display=swap" rel="stylesheet"> 
     <title>Doc</title>
 </head>
 <body>
-  <h1>Cloud Cafe</h1>
+  <h1>SAFE CHAT</h1>
 
   <div class="content">
 
       <form id="add-cafe-form">
-        <input type="text" name="name" placeholder="cafe name">
-        <input type="text" name="city" placeholder="city">
-        <button>Add Cafe</button>
+        <input style="background-color: black" type="text" name="name" placeholder="nick">
+        <input style="background-color: black" type="text" name="city" placeholder="wiadomość..">
+        <button>Wyślij</button>
       </form>
 
-      <ul id="cafe-list"></ul>
+      <ul id="cafe-list" class="scrollMe"></ul>
 
   </div>
 <!-- The core Firebase JS SDK is always required and must be listed first -->

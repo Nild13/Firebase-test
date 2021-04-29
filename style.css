@@ -1,10 +1,21 @@
+
+    /* font-family: 'Black Ops One', cursive;
+
+    font-family: 'Press Start 2P', cursive;
+
+    font-family: 'VT323', monospace; 
+    font-family: 'Tomorrow', sans-serif;;
+    */
+
+
 body{
-    background: #eab0dc;
+    background: #000000;
     font-family: ubuntu;
 }
 
 h1{
-    color: #fff;
+    font-family:'Black Ops One', cursive;
+    color: rgb(1, 255, 56);
     font-size: 64px;
     letter-spacing: 2px;
     margin-top: 80px;
@@ -12,32 +23,34 @@ h1{
 }
 
 .content{
-    background: #fff;
+    background: rgb(0, 0, 0);
     max-width: 960px;
     margin: 30px auto;
     padding:  20px 30px;
+    border: 6px solid  rgb(1, 255, 56);
     border-radius: 10px 120px 10px 10px;
     box-shadow: 1px 3px 5px rgba(0,0,0,0.1)
 }
 
 ul{
+    font-family: 'Black Ops One', cursive;
     list-style-type: none;
     padding: 0;
 }
 
 li{
     padding: 20px;
-    background: #f6f6f6;
+    background: #1b1919;
     font-size: 20px;
-    color: #555;
+    color: rgb(1, 255, 56);
     position: relative;
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid rgb(1, 255, 56);
     height: 46px;
 }
 
 li:nth-child(even){
     padding: 20px;
-    background: #f2f2f2;
+    background: #272727;
 }
 
 li span{
@@ -47,14 +60,14 @@ li span{
 li span:nth-child(2){
     font-size: 16px;
     margin-top: 6px;
-    color: #999;
+    color: rgb(1, 255, 56);
 }
 
 li div{
     position: absolute;
     top: 0;
     right: 0px;
-    background: rgba(255,255,255,0.6);
+    background: none;
     width: 40px;
     text-align: center;
     padding: 10px 0;
@@ -67,20 +80,22 @@ form input{
     width: 38%;
     margin: 0;
     border: 0;
-    border-bottom: 1px solid #eee;
+    /* border-bottom: 1px solid #eee; */
     margin: 0 1%;
     padding: 10px;
     display: block;
     box-sizing: border-box;
     font-size: 18px;
+    color: rgb(1, 255, 56);
+    font-weight: bold;
 }
 
-form input:focus{
+/* form input:focus{
     outline: none;
     border-bottom: 3px solid #88236f;
     padding-bottom: 8px;
     transition: all ease 0.2s;
-}
+} */
 
 form:after{
     content: '';
@@ -89,8 +104,8 @@ form:after{
 }
 
 button{
-    border: 0;
-    background: #fff;
+    border: 1px solid rgb(1, 255, 56); ;
+    background: rgb(0, 0, 0);
     border-radius: 10px;
     padding: 13px;
     width: 14%;
@@ -98,7 +113,12 @@ button{
     font-weight: bold;
     font-family: ubuntu;
     letter-spacing: 1px;
-    color: #999;
+    color:  rgb(1, 255, 56);
+}
+button:hover{
+    background-color:  rgb(1, 255, 56);
+    color: black;
+    cursor:pointer
 }
 .scrollMe{
     width: 47em;
