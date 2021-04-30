@@ -39,10 +39,14 @@ db.collection('cafe').onSnapshot(snapshot =>{
 });
 form.addEventListener('submit', (e) =>{
     e.preventDefault();
+    if(!form.name.value){
     db.collection('cafe').add({
         name:form.name.value,
         city:form.city.value
     })
     // form.name.value = '';
     form.city.value = '';
-})
+}
+    else{
+        return alert('podaj cos typie')
+    }})
