@@ -1,23 +1,23 @@
-const cafeList = document.querySelector('#cafe-list');
+const messageList = document.querySelector('#cafe-list');
 const form = document.querySelector('#add-cafe-form');
 
 
 function renderCafe(doc){
     let li = document.createElement('li');
     let name = document.createElement('span');
-    let city = document.createElement('span');
+    let message = document.createElement('span');
     let cross = document.createElement('div')
 
     li.setAttribute('data-id', doc.id);
     name.textContent = doc.data().name;
-    city.textContent = doc.data().city;
+    message.textContent = doc.data().message;
     cross.textContent = 'X';
 
     li.appendChild(name);
-    li.appendChild(city);
+    li.appendChild(message);
     li.appendChild(cross)
 
-    cafeList.appendChild(li);
+    messageList.appendChild(li);
     cross.addEventListener('click', (e) => {
         let id = e.target.parentElement.getAttribute('data-id');
         console.log(id)
@@ -32,21 +32,17 @@ db.collection('cafe').onSnapshot(snapshot =>{
             renderCafe(change.doc);
         }
         else if(change.type == 'removed'){
-            let li = cafeList.querySelector('[data-id =' + change.doc.id + ']');
-            cafeList.removeChild(li);
+            let li = messageList.querySelector('[data-id =' + change.doc.id + ']');
+            messageList.removeChild(li);
         }
     })
 });
 form.addEventListener('submit', (e) =>{
     e.preventDefault();
-    if(!form.name.value){
     db.collection('cafe').add({
         name:form.name.value,
-        city:form.city.value
+        message:form.message.value
     })
     // form.name.value = '';
-    form.city.value = '';
-}
-    else{
-        return alert('podaj cos typie')
-    }})
+    form.message.value = '';
+    })
