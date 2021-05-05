@@ -1,5 +1,5 @@
-const messageList = document.querySelector('#cafe-list');
-const form = document.querySelector('#add-cafe-form');
+const messageList = document.querySelector('#message-list');
+const form = document.querySelector('#add-message-form');
 
 
 function renderCafe(doc){
@@ -21,11 +21,11 @@ function renderCafe(doc){
     cross.addEventListener('click', (e) => {
         let id = e.target.parentElement.getAttribute('data-id');
         console.log(id)
-        db.collection('cafe').doc(id).delete();
+        db.collection('chatMessages').doc(id).delete();
     })
 }
 
-db.collection('cafe').onSnapshot(snapshot =>{
+db.collection('chatMessages').onSnapshot(snapshot =>{
     let changes = snapshot.docChanges();
     changes.forEach(change => {
         if(change.type == 'added'){
@@ -39,7 +39,7 @@ db.collection('cafe').onSnapshot(snapshot =>{
 });
 form.addEventListener('submit', (e) =>{
     e.preventDefault();
-    db.collection('cafe').add({
+    db.collection('chatMessages').add({
         name:form.name.value,
         message:form.message.value
     })
